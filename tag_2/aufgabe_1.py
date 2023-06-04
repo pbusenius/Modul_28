@@ -6,7 +6,7 @@ X = 9888508
 Y = 3930036
 
 
-def find_random_exponent(p: int, g: int, pk) -> int:
+def find_exponent(p: int, g: int, pk) -> int:
     sk = None
     res = 1
     for i in range(1, p):
@@ -23,8 +23,8 @@ def compute_key(sk: int, pk: int, p: int) -> int:
 
 
 if __name__ == "__main__":
-    x = find_random_exponent(p, g, X)
-    y = find_random_exponent(p, g, Y)
+    x = find_exponent(p, g, X)
+    y = find_exponent(p, g, Y)
 
     print(f"Alice x: {x} X: {X}")
     print(f"Bob   y: {y} Y: {Y}")
