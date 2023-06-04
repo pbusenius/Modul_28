@@ -8,11 +8,7 @@ OUTPUT_FILE = "tag_1_rsa_moduli_result.txt"
 def is_prime(n: int, rounds:int=60) -> bool:
     is_prime_results = []
 
-    if n == 2:
-        return True
-    elif n % 2 == 0:
-        return False
-    elif n == 1:
+    if n == 2 or n == 1 or n % 2 == 0:
         return False
 
     for _ in range(rounds):
