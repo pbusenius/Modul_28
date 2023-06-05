@@ -28,11 +28,11 @@ def main():
 
     for i in range(2**32):
         data = modify_auftragsnummer(data)
-        hash_value = compute_hash(data)
-        if old_hash_value == hash_value:
-            print(f"collision found after {i} runs")
+        if old_hash_value == compute_hash(data):
             with open(OUTPUT_PATH, "w") as file:
                 file.write(data)
+
+            print(f"collision found after {i} runs")
             break
 
 
