@@ -31,7 +31,7 @@ def main():
 
     data = modify_bank_information(data)
 
-    for i in range(2**32):
+    for i in range(2**32): 
         data = modify_auftragsnummer(data)
         if old_hash_value == compute_hash(data):
             with open(OUTPUT_PATH, "w") as file:
